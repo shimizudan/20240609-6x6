@@ -244,9 +244,9 @@ function draw_rect(A::Matrix , n=6 , k=0)
     plot(label=false,xlim=(0,n),ylim=(0,n),aspectratio=true,showaxis=false,framestyle=:box,ticks=0:1:n)
     for i = 1:n ,j = 1:n
         if mod(A[i,j],2) == 0
-            plot!(rect_number(i,j),fill=true,color="#74F9FD",label=false,alpha=.7)         #1
+            plot!(rect_number(i,j),fill=true,color=:royalblue,label=false,alpha=.5)         #1
         else
-            plot!(rect_number(i,j),fill=true,color="#72F64A",label=false,alpha=.7)      #2
+            plot!(rect_number(i,j),fill=true,color=:forestgreen,label=false,alpha=.5)      #2
         end
      end
     plot!(title = k)
