@@ -138,9 +138,9 @@ C
 ```{julia}
 #| code-fold: true
 #| code-summary: "Show the code"
-function conti_18(A::Matrix) # 6x6の行列を入力　各成分は0,1
+function conti_18(A::Matrix) #6x6の行列を入力　各成分は0,1
     k = A[1,1] # [1,1]成分
-    Pack = [[1,1]] # 連結する成分を加えていく
+    Pack = [[1,1]] #連結する成分を加えていく
     t = 1 # パラメータ
     x = 18 # パラメータ
     while  t != x
@@ -190,9 +190,9 @@ D
 #| code-summary: "Show the code"
 X =[]
 for i =  1:length(D)-1 , j = i+1:length(D)
-    if D[i] == rotr90(D[j]) # 右90度回転
+    if D[i] == rotr90(D[j]) #右90度回転
         push!(X,D[i])
-    elseif D[i] == rotl90(D[j]) # 左90度回転
+    elseif D[i] == rotl90(D[j]) #左90度回転
         push!(X,D[i])
     elseif D[i] == rotl90(D[j]') #左右折り返し
         push!(X,D[i])
@@ -244,9 +244,9 @@ function draw_rect(A::Matrix , n=6 , k=0)
     plot(label=false,xlim=(0,n),ylim=(0,n),aspectratio=true,showaxis=false,framestyle=:box,ticks=0:1:n)
     for i = 1:n ,j = 1:n
         if mod(A[i,j],2) == 0
-            plot!(rect_number(i,j),fill=true,color=:royalblue,label=false,alpha=.5)         #1
+            plot!(rect_number(i,j),fill=true,color=:royalblue,label=false,alpha=.5) 
         else
-            plot!(rect_number(i,j),fill=true,color=:Brown3,label=false,alpha=.5)      #2
+            plot!(rect_number(i,j),fill=true,color=:Brown3,label=false,alpha=.5) 
         end
      end
     plot!(title = k)
